@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/stylesheet.css">
+    <title>Bitcoin Value!</title>
+    <script src="function.js"></script> 
+
+</head>
+
+
+<body>
+
+	<style>
+body {
+  background-image: url('../images/bitcoin.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  opacity: 1.5;
+  color: black;
+  text-align: center;
+}
+
+ h1 { 	
+ 	color: black;
+ 	font-size: large;
+ 	font-family: georgia;
+ 	text-align: center; 
+ }
+
+</style> 
+    
+    
+    <div class="row space-row space-top text-center">
+        <div class="col">
+            <h1 class="display-1">Value of the bitcoin</h1>
+        </div>
+    </div>
+    
+    <div class="row space-row">
+        <div class="col text-justify">
+               You're here to have a look at the value of the bitcoin in real time:
+               The value of the bitcoin evolves a lot and to know its value in real time you just have to click on the button to know more about it.
+        </div>
+    </div>
+
+    <div class="api-meteo" id="api">
+    	<input type="button" value="Value of the bitcoin in Euros" onclick="action('e')" />
+    </div>
+
+
+    <div class="api-meteo" id="api">
+    	<input type="button" value="Value of the bitcoin in Dollars" onclick="action('d')" />
+    </div>
+
+
+    <div class="api-meteo" id="api">
+    	<input type="button" value="Value of the bitcoin in Pounds" onclick="action('p')" />
+    </div>
+
+
+	<div>
+    	<p id="value">
+    	</p>
+    </div>
+    
+   
+</body>
+</html>
