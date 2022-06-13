@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">     
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/stylesheet.css">
+        <title>Gestion du personnel</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-dark fixed-top navbar-expand">
+            <a class="navbar-brand" href="index.html">Accueil</a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="pages/afficher.html">Afficher la liste des employés</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pages/ajouter.html">Ajouter un employé</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="pages/supprimer.html">Supprimer un employé</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pages/modif.html">Modifier un employé</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="img-wrapper" id="image">
+            <img class="img-responsive" src="images/company.jpg">
+            <div class="img-overlay">
+                <audio id="sound1" src="intro.mp3" preload="auto"></audio>
+                <button class="btn btn-responsive btn-outline-light" href="#text" onclick="document.getElementById('sound1').play();document.getElementById('debut').scrollIntoView(true);">Quelles sont les valeurs du groupe ? </button>
+            </div>
+        </div>
+        <div class="row space-row" id='debut'>
+            <div class="col space-top">
+                <h1 class="display-1 text-center">Un groupe aux fortes ambitions</h1>
+            </div>
+        </div>
+        <div class="row space-row">
+            <div class="col">
+                <h2 class="text-justify font-weight-light">L'ambition du groupe est portée par 4 pilliers : 
+                	- Accélerer le développement à l'international grâce à un marketing multimarques efficace.
+
+                	- Concevoir des produits et solution de 
+                	qualités
+
+                	- Proposer la gamme la plus large du marché et apporter une proximité commerciale et technique.
+
+                	- Renforcer le leadership auprès de nos clients. 
+                </h2>
+            </div>
+        </div>
+        
+        
+        <div class="row space-row">
+            <div class="col">
+                <div class="list-group list-group-flush">
+                    <a href="#parodies" class="list-group-item list-group-item-action"><h2>Nos valeurs</h2></a>
+                    
+                </div>
+            </div>
+        </div>
+        <!----to go to the parodies section from the website contents   -->
+        <div class="row space-row text-center" id="parodies">
+        </div>
+        <div class="row space-row text-center">
+            <div class="col">
+                <h1 class="display-1">Les valeurs du groupe</h1>
+            </div>
+        </div>
+       <div class="row space-row">
+        <div class="container-fluid reduce-margin">
+        <table class="table table-hover table-sm space-top">
+            <thead>
+                <tr>
+                    <th scope="col">Valeurs</th>
+                    
+                </tr>
+            </thead>
+            
+
+            <tbody>
+                <tr>
+                    <th scope="row">Respect</th>
+                    
+                </tr>
+                <tr>
+                    <th scope="row">Audace</th>
+                   
+                </tr>
+                <tr>
+                    <th scope="row">Partage</th>
+                    
+                </tr>
+                <tr>
+                    <th scope="row">Engagement</th>
+                   
+                </tr>
+                <tr>
+                    <th scope="row">Innovation</th>
+                   
+                </tr>
+                
+            </tbody>
+        </table>
+        </div>
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script>
+            //Script pour donner de la couleur a la navbar lorsqu'elle dépasse la photo en background
+            $.fn.isOnScreen = function() {
+            var win = $(window);
+             var viewport = {
+            top: win.scrollTop(),
+            left: win.scrollLeft()
+            };
+            viewport.right = viewport.left + win.width();
+            viewport.bottom = viewport.top + win.height();
+            var bounds = this.offset();
+            bounds.right = bounds.left + this.outerWidth();
+            bounds.bottom = bounds.top + this.outerHeight();
+             return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
+            };
+
+            $(window).scroll(function(){
+                $('nav').toggleClass('scrolled',$('.img-wrapper').isOnScreen()===false);
+            });
+        </script>
+    </body>
+</html>
